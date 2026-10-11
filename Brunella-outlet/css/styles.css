@@ -1,0 +1,376 @@
+/* ============================================================
+   RESET Y VARIABLES GLOBALES
+============================================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-primario: #1c1c1c;
+    --color-acento: #c5a059; /* Tono dorado/plata acorde al rubro */
+    --color-fondo-claro: #faf9f6;
+    --color-blanco: #ffffff;
+    --color-texto: #333333;
+    --fuente-titulos: 'Playfair Display', serif;
+    --fuente-cuerpo: 'Montserrat', sans-serif;
+}
+
+body {
+    font-family: var(--fuente-cuerpo);
+    background-color: var(--color-fondo-claro);
+    color: var(--color-texto);
+    line-height: 1.6;
+}
+
+/* ============================================================
+   HEADER Y NAVEGACIÓN
+============================================================ */
+.header {
+    background-color: var(--color-blanco);
+    border-bottom: 1px solid #e5e5e5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2.5rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 55px;          
+    width: auto;           
+    border-radius: 50%;    
+    display: block;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 1.8rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--color-primario);
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.activo {
+    color: var(--color-acento);
+}
+
+/* ============================================================
+   HERO / BANNER (PROPIEDADES BACKGROUND EXIGIDAS)
+============================================================ */
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                url('../img/anillos.jpg') center/cover no-repeat;
+    color: var(--color-blanco);
+    text-align: center;
+    padding: 7rem 1.5rem;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-content h1 {
+    font-family: var(--fuente-titulos);
+    font-size: 3.2rem;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    font-weight: 300;
+}
+
+/* ============================================================
+   BOTONES
+============================================================ */
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.8rem;
+    border-radius: 4px;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    font-family: var(--fuente-cuerpo);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.btn-hero {
+    background-color: var(--color-acento);
+    color: var(--color-blanco);
+}
+
+.btn-hero:hover {
+    background-color: #aa8543;
+}
+
+.btn-card {
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.btn-card:hover {
+    background-color: var(--color-acento);
+}
+
+.btn-form {
+    background-color: var(--color-acento);
+    color: var(--color-blanco);
+    width: 100%;
+    font-size: 1rem;
+    border-radius: 4px;
+}
+
+.btn-form:hover {
+    background-color: #aa8543;
+}
+
+/* ============================================================
+   SECCIÓN PRODUCTOS (FLEXBOX RESPONSIVE EXIGIDA)
+============================================================ */
+.productos-section {
+    padding: 4.5rem 1.5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.seccion-titulo {
+    font-family: var(--fuente-titulos);
+    font-size: 2.5rem;
+    text-align: center;
+    color: var(--color-primario);
+    margin-bottom: 2.5rem;
+}
+
+.contenedor-tarjetas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.5rem;
+}
+
+.tarjeta-producto {
+    background-color: var(--color-blanco);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    flex: 1 1 280px;
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #f0f0f0;
+}
+
+.producto-img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover; /* Evita que la foto se estire */
+}
+
+.producto-info {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+.producto-info h3 {
+    font-family: var(--fuente-titulos);
+    font-size: 1.4rem;
+    margin-bottom: 0.6rem;
+    color: var(--color-primario);
+}
+
+.producto-info .descripcion {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.producto-info .precio {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--color-acento);
+}
+
+/* ============================================================
+   SECCIÓN MULTIMEDIA (VIDEO LOCAL HISTORIA VERTICAL)
+============================================================ */
+.multimedia-section {
+    background-color: #f5eedf; /* Fondo cálido que combina */
+    padding: 4.5rem 1.5rem;
+    text-align: center;
+}
+
+.subtitulo-seccion {
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    color: #555;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.video-container-local {
+    display: flex;
+    justify-content: center;
+}
+
+.video-instagram {
+    max-width: 100%;
+    max-height: 600px; /* Al ser vertical de Instagram no debe comerse la pantalla */
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    background-color: #000;
+}
+
+/* ============================================================
+   SECCIÓN RESEÑAS (CSS GRID EXIGIDA)
+============================================================ */
+.resenas-section {
+    padding: 4.5rem 1.5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.grid-resenas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.tarjeta-resena {
+    background-color: var(--color-blanco);
+    padding: 2rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--color-acento);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+.resena-texto {
+    font-style: italic;
+    font-size: 0.95rem;
+    margin-bottom: 1.2rem;
+}
+
+.resena-autor {
+    font-weight: 600;
+    color: var(--color-primario);
+    display: block;
+    text-align: right;
+    font-size: 0.9rem;
+}
+
+/* ============================================================
+   CONTACTO (Y RESPONSIVE CON MEDIA QUERIES EXIGIDAS)
+============================================================ */
+.contacto-main {
+    padding: 4rem 1.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.contacto-section {
+    background-color: var(--color-blanco);
+    padding: 3rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    max-width: 650px;
+    border: 1px solid #f0f0f0;
+}
+
+.formulario-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.campo-grupo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.campo-grupo label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--color-primario);
+}
+
+.campo-grupo input,
+.campo-grupo select,
+.campo-grupo textarea {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: var(--fuente-cuerpo);
+    font-size: 0.95rem;
+}
+
+.campo-grupo input:focus,
+.campo-grupo select:focus,
+.campo-grupo textarea:focus {
+    outline: none;
+    border-color: var(--color-acento);
+}
+
+/* ============================================================
+   FOOTER
+============================================================ */
+.footer {
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    text-align: center;
+    padding: 2.5rem 1.5rem;
+    margin-top: 4rem;
+    font-size: 0.9rem;
+}
+
+/* ============================================================
+   MEDIA QUERIES (RESPONSIVE EXIGIDO)
+============================================================ */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1.5rem;
+    }
+
+    .nav-list {
+        gap: 1.2rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .contacto-section {
+        padding: 1.8rem;
+    }
+}

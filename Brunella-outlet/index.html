@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brunella Outlet | Joyas y Accesorios de Plata 925</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+    <!-- Vinculación del CSS externo -->
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+
+    <!-- HEADER Y NAVEGACIÓN -->
+    <header class="header">
+        <div class="logo-container">
+            <a href="./index.html">
+                <img src="./img/logo.jpeg" alt="Brunella Accesorios" class="logo-img">
+            </a>
+        </div>
+        <nav class="nav">
+            <ul class="nav-list">
+                <li><a href="./index.html" class="nav-link activo">Inicio</a></li>
+                <li><a href="#productos" class="nav-link">Productos</a></li>
+                <li><a href="#video-seccion" class="nav-link">Video</a></li>
+                <li><a href="#resenas" class="nav-link">Opiniones</a></li>
+                <li><a href="./pages/contacto.html" class="nav-link">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+        <!-- SECCIÓN BANNER / BIENVENIDA -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1>Accesorios con Estilo y Elegancia</h1>
+                <p>Descubrí nuestra colección exclusiva de plata 925. Anillos delicados, collares en tendencia y ear cuffs modernos para elevar cada uno de tus looks cotidianos.</p>
+                <a href="#productos" class="btn btn-hero">Ver Catálogo</a>
+            </div>
+        </section>
+
+        <!-- SECCIÓN PRODUCTOS (FLEXBOX) -->
+        <section id="productos" class="productos-section">
+            <h2 class="seccion-titulo">Nuestros Productos</h2>
+            <div class="contenedor-tarjetas">
+                
+                <!-- Card 1: Anillos -->
+                <article class="tarjeta-producto">
+                    <img src="./img/anillo.png" alt="Anillos de Plata 925 Brunella" class="producto-img">
+                    <div class="producto-info">
+                        <h3>Anillos de Plata 925</h3>
+                        <p class="descripcion">Modelos únicos regulables y fijos, con diseños de ojo, tortuga.</p>
+                        <p class="precio">$4.500</p>
+                        <button type="button" class="btn btn-card">Consultar stock</button>
+                    </div>
+                </article>
+
+                <!-- Card 2: Cuffs -->
+                <article class="tarjeta-producto">
+                    <img src="./img/cuff.png" alt="Ear Cuff" class="producto-img">
+                    <div class="producto-info">
+                        <h3>Cuffs de Plata</h3>
+                        <p class="descripcion">La nueva opción para no perforar la oreja. Queda súper estético y parecido a los piercings tradicionales.</p>
+                        <p class="precio">$3.800</p>
+                        <button type="button" class="btn btn-card">Consultar stock</button>
+                    </div>
+                </article>
+
+                <!-- Card 3: Collares -->
+                <article class="tarjeta-producto">
+                    <img src="./img/collar.png" alt="Collar Bolitas y Cadena Balls Brunella" class="producto-img">
+                    <div class="producto-info">
+                        <h3>Collares & Cadenas</h3>
+                        <p class="descripcion">Collar Bolitas y Cadena Balls de Plata 925. Delicados, ideales para lucir todos los días.</p>
+                        <p class="precio">$6.200</p>
+                        <button type="button" class="btn btn-card">Consultar stock</button>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+      <!-- SECCIÓN MULTIMEDIA (VIDEO LOCAL DE INSTAGRAM) -->
+<section id="video-seccion" class="multimedia-section">
+    <h2 class="seccion-titulo">Brunella Outlet</h2>
+    <p class="subtitulo-seccion">Te mostramos de cerca el brillo y la variedad de nuestros anillos en este video de nuestras historias ✨</p>
+    
+    <div class="video-container-local">
+        <!-- controls para reproducir y clase limpia -->
+        <video controls width="360" class="video-instagram" poster="./img/anillo.png">
+            <source src="./img/historia.mp4" type="video/mp4">
+            Tu navegador no soporta la reproducción de video.
+        </video>
+    </div>
+</section>
+
+        <!-- SECCIÓN RESEÑAS (CSS GRID) -->
+        <section id="resenas" class="resenas-section">
+            <h2 class="seccion-titulo">Opiniones de Nuestras Clientas</h2>
+            <div class="grid-resenas">
+                <article class="tarjeta-resena">
+                    <p class="resena-texto">"Compré los cuffs de plata y son hermosos. No se caen para nada, súper cómodos y parecen piercings de verdad."</p>
+                    <span class="resena-autor">— Mariana.</span>
+                </article>
+                <article class="tarjeta-resena">
+                    <p class="resena-texto">"La calidad de los anillos es increíble y la atención de las chicas es lo más."</p>
+                    <span class="resena-autor">— Camila.</span>
+                </article>
+                <article class="tarjeta-resena">
+                    <p class="resena-texto">"Me llegó el collar de bolitas. Súper recomendadas."</p>
+                    <span class="resena-autor">— Alma.</span>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>&copy; 2026 Brunella Outlet. Todos los derechos reservados.</p>
+        <p>Seguinos en Instagram: <strong>@brunella.outlet</strong></p>
+    </footer>
+
+</body>
+</html>
