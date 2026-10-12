@@ -75,7 +75,7 @@ body {
 ============================================================ */
 .hero-section {
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
-                url('../img/anillos.jpg') center/cover no-repeat;
+                url('../img/anillo.png') center/cover no-repeat;
     color: var(--color-blanco);
     text-align: center;
     padding: 7rem 1.5rem;
